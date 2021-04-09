@@ -1,11 +1,14 @@
+* {
+    box-sizing: border-box;
+}
+
 #title {
     text-align: center;
     font-size: 1.75em;
 }
 
-.menu-box {
+.menu-box, .menu-box-bottom {
     background-color: grey;
-    width: 32%;
     margin: 10px;
     border-style: solid;
     border-width: 1px;
@@ -13,7 +16,7 @@
     position: relative;
 }
 
-.menu-box > .item {
+.menu-box > .item, .menu-box-bottom > .item {
     float: right;
     width: 33%;
     margin: 0px;
@@ -24,8 +27,9 @@
     text-align: center;
 }
 
-.menu-box > p {
+.menu-box > p, .menu-box-bottom > p {
     clear: both;
+    margin: 10px;
 }
 
 #beef {
@@ -38,4 +42,26 @@
 
 #sushi {
     background-color: yellow;
+}
+
+@media (max-width: 767px) {
+    .menu-box, .menu-box-bottom {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu-box {
+        width: calc(50% - 20px);
+    }
+
+    .menu-box-bottom {
+        width: calc(100% - 20px);
+    }
+}
+
+@media (min-width: 992px) {
+    .menu-box, .menu-box-bottom {
+        width: calc(33.33% - 20px);
+    }
 }
