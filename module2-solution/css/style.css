@@ -7,16 +7,19 @@
     font-size: 1.75em;
 }
 
-.menu-box, .menu-box-bottom {
+.menu-container, .menu-container-bottom {
+    float: left;
+    padding: 10px;
+}
+
+.menu-box {
     background-color: grey;
-    margin: 10px;
     border-style: solid;
     border-width: 1px;
-    float: left;
     position: relative;
 }
 
-.menu-box > .item, .menu-box-bottom > .item {
+.menu-box > .item {
     float: right;
     width: 33%;
     margin: 0px;
@@ -27,9 +30,9 @@
     text-align: center;
 }
 
-.menu-box > p, .menu-box-bottom > p {
+.menu-box > p {
     clear: both;
-    margin: 10px;
+    padding: 10px;
 }
 
 #beef {
@@ -45,23 +48,23 @@
 }
 
 @media (max-width: 767px) {
-    .menu-box, .menu-box-bottom {
-        width: calc(100% - 20px);
+    .menu-container, .menu-container-bottom {
+        width: 100%;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    .menu-box {
-        width: calc(50% - 20px);
+    .menu-container {
+        width: 50%;
     }
 
-    .menu-box-bottom {
-        width: calc(100% - 20px);
+    .menu-container-bottom {
+        width: 100%;
     }
 }
 
 @media (min-width: 992px) {
-    .menu-box, .menu-box-bottom {
-        width: calc(33.33% - 20px);
+    .menu-container, .menu-container-bottom {
+        width: 33.33%;
     }
 }
